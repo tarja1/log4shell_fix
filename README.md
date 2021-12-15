@@ -1,5 +1,7 @@
 # log4shell_fix 
-finding Java executables affected by "Log4Shell" log2j JNDI exploit
+finding Java executables affected by "Log4Shell" log2j JNDI exploit;
+
+optionally, fix them by removing the vulnerable class.
 
 # context
 In December 2021, a JNDI-exploit in log4j was found, rated as "critical" CVE-2021-44228. 
