@@ -17,12 +17,13 @@ This bash script scans a given path recursively for archive types (JAR, WAR, EAR
 and within for the risky class. It reports findings, and there is also an option
 for automated removal.
 
-Removing said class should, according to the Apache docs, 
+Removing said class should, according to the [Apache docs](https://logging.apache.org/log4j/2.x/security.html), 
 provide a fix without affecting the regular functionality of the logging class.
 But doing so, whether using this script, or manually, is done at your own risk.
 
 
-A more permanent solution is to update all software which uses log4j to the 
+A more permanent solution is to update all software which uses log4j to at log4j2 version 2.16.0 or later (Java7 to 2.12.2).
+
 
 # License
 This software is placed under a [CC-BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
