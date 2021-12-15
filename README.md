@@ -40,9 +40,15 @@ It is (c) 2021 Tarja, all rights reserved.
 2. log in as account with sufficient rights to access all files to be searched
 3. execute script, giving the path to be searched as parameter (default is "/")
 
+Example usage to scan a path (defaults to /):
+
+    $ ./removeJndiFromLog4j.bash /path/to/scan
+
 Output lines marked "WARNING" will tell you where the risk is found, 
 or where the script encountered issues in its operation (e.g. nested archives).
 Lines marked "NOTICE" give you additional information where related issues were found.
 
 If verbose mode is activated, the files being worked on are shown. Otherwise, 
 the script performs silently unless there is something to report.
+
+
