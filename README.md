@@ -40,6 +40,10 @@ It is (c) 2021 Tarja, all rights reserved.
 2. log in as account with sufficient rights to access all files to be searched
 3. execute script, giving the path to be searched as parameter (default is "/")
 
+Example way to obtain:
+
+    $ wget https://gihttps://github.com/tarja1/log4shell_fix/blob/main/removeJndiFromLog4j.bash
+
 Example usage to scan a path (defaults to /):
 
     $ ./removeJndiFromLog4j.bash /path/to/scan
