@@ -42,11 +42,11 @@ It is (c) 2021 Tarja, all rights reserved.
 
 Example way to obtain:
 
-    $ wget https://gihttps://github.com/tarja1/log4shell_fix/blob/main/removeJndiFromLog4j.bash
+    $ wget https://raw.githubusercontent.com/tarja1/log4shell_fix/main/removeJndiFromLog4j.bash
 
 Example usage to scan a path (defaults to /):
 
-    $ ./removeJndiFromLog4j.bash /path/to/scan
+    $ bash removeJndiFromLog4j.bash /path/to/scan
 
 Output lines marked "WARNING" will tell you where the risk is found, 
 or where the script encountered issues in its operation (e.g. nested archives).
