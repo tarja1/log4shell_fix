@@ -1,7 +1,7 @@
 #!/bin/bash
 # fix for CVE-2021-45046 and CVE-2021-44228: removing all instances of the "guilty" JNDI class, systemwide.
 # (c) Tarja 2021, all rights reserved - License: CC-BY-SA 4.0
-# Version 1.0.0 alpha
+# Version 1.0.1
 
 # path to scan from first parameter. default: entrire filesystem
 PATH_TO_SCAN=/
@@ -53,10 +53,10 @@ handleArchiveRecursion()
  filenameInArchive=$2
 
  if $verbose; then
-   echo "WARNING: nested archive - $filenameInArchive in $filename"
+   echo "WARNING: nested archive - $filename contains $filenameInArchive"
  fi
- # optional recursion
- # matching log4j specifically
+ 
+ # matching log4j specifically, to make the report more useful
  if [[ $filenameInArchive =~ ^log4j-core*.jar$ ]];
  then
     echo "WARNING: log4j JAR found inside another archive $filename. no automated cleanup possible as of now"
@@ -96,7 +96,7 @@ scanAndCleanFile()
 usage()
 {
   echo "Usage: $0 [-h | --help] [-V | --version] [-v | --verbose] [-d | --delete] [directory]" 1>&2
-  echo "Version: 1.0.0 alpha" 1>&2
+  echo "Version: 1.0.1" 1>&2
   echo "(c) Tarja 2021, all rights reserved - License: CC-BY-SA 4.0" 1>&2
   echo "purpose: finding all Java archives affected by log4j-JNDI issues CVE-2021-45046 and CVE-2021-44228" 1>&2
   echo "use --verbose for progress output" 1>&2
