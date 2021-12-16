@@ -47,6 +47,10 @@ Example way to obtain:
 Example usage to scan a path (defaults to /):
 
     $ bash removeJndiFromLog4j.bash /path/to/scan
+    
+Example: scan entire filesystem, log results to file, showing progress
+
+    $ bash removeJndiFromLog4j.bash -v / >log4shell_scanresults
 
 Output lines marked "WARNING" will tell you where the risk is found, 
 or where the script encountered issues in its operation (e.g. nested archives).
